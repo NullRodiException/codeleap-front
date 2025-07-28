@@ -14,7 +14,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-function loginComGoogle() {
+function loginWithGoogle() {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
         .then(result => result.user.getIdToken())
@@ -38,5 +38,5 @@ function copyToken() {
     }
 }
 
-window.copiarToken = copyToken;
-window.loginComGoogle = loginComGoogle;
+window.copyToken = copyToken;
+window.loginWithGoogle = loginWithGoogle;
